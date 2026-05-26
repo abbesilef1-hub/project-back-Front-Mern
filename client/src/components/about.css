@@ -1,0 +1,103 @@
+/* ===== CONTAINER ===== */
+
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fffaf9, #f8ecec);
+}
+
+/* ===== CARD ===== */
+
+.about-card {
+    max-width: 700px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    text-align: center;
+    animation: fadeUp 0.8s ease;
+}
+
+/* title */
+.about-card h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 2.5rem;
+    color: #9E7676;
+    margin-bottom: 20px;
+}
+
+/* text */
+.about-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* ===== STATS ===== */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stat {
+    background: rgba(158,118,118,0.1);
+    padding: 15px 20px;
+    border-radius: 15px;
+    min-width: 120px;
+    transition: 0.3s ease;
+}
+
+/* hover */
+.stat:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(158,118,118,0.2);
+}
+
+/* numbers */
+.stat h3 {
+    color: #9E7676;
+    font-size: 1.5rem;
+}
+
+/* text */
+.stat p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    .about-card {
+        padding: 25px;
+    }
+
+    .about-card h1 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+}

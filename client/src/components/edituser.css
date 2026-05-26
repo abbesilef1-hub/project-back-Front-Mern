@@ -1,0 +1,63 @@
+.editbutton{
+    width: 45px;
+    height: 45px;
+    border-radius: 50% !important;
+    border: none !important;
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(10px);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease !important;
+    margin-right: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.editbutton svg{
+    width: 22px;
+    height: 22px;
+    fill: #9E7676;
+    transition: 0.4s ease;
+}
+
+.editbutton::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.7s;
+}
+
+.editbutton:hover::before{
+    transform: translateX(100%);
+}
+
+.editbutton:hover{
+    transform: translateY(-3px) scale(1.08) !important;
+    background: rgba(255,255,255,0.22) !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18) !important;
+}
+
+.editbutton:hover svg{
+    fill:  #c9a7a7;
+    filter: drop-shadow(0 0 6px rgba(93, 153, 250, 0.6));
+    stroke: #3A86FF;
+}
+
+.editbutton:active{
+    transform: scale(0.92);
+    transition: 0.1s ease;
+}
+
+.editbutton:active{
+    transform: scale(0.88);
+    filter: brightness(0.9);
+}

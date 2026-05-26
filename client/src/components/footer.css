@@ -1,0 +1,137 @@
+/* ===== FOOTER ===== */
+
+.footer {
+    margin-top: -10px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #9E7676, #c9a7a7);
+    color: white;
+    text-align: center;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.15);
+}
+
+/* content */
+.footer-content h2 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* links */
+.footer-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* underline animation */
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-links a:hover {
+    transform: translateY(-2px);
+}
+
+/* bottom */
+.footer-bottom {
+    margin-top: 25px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    .footer-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+/* ===== SOCIAL ICONS ===== */
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* hover effect */
+.social:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    filter: drop-shadow(0 0 8px rgba(158,118,118,0.5));
+}
+
+/* brand colors on hover */
+.social.facebook:hover { 
+    color: white;
+    /* background: #9E7676;  */
+    background: linear-gradient(135deg, #9E7676, #c9a7a7);
+}
+.social.instagram:hover { 
+    color: white;
+    /* background: #c9a7a7;  */
+    background: linear-gradient(135deg, #c9a7a7, #9E7676);
+}
+.social.twitter:hover { 
+    color: white;
+    background: linear-gradient(135deg, #9E7676, #c9a7a7);
+    /* background: #9E7676;  */
+    /* background: linear-gradient(135deg, #b08a8a, #9E7676); */
+}
+.social.linkedin:hover { 
+    color: white;
+    background: linear-gradient(135deg, #c9a7a7, #9E7676);
+    /* background: #c9a7a7;  */
+    /* background: linear-gradient(135deg, #8d6e6e, #c9a7a7); */
+}
+
+/* icon size */
+.social i {
+    font-size: 16px;
+}

@@ -1,0 +1,159 @@
+.usercard{
+    width: 14rem;
+    height: 350px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: 0.4s ease;
+    position: relative;
+}
+
+/* hover card */
+
+.usercard:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* image */
+
+.imguser{
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+/* zoom image on hover */
+
+.usercard:hover .imguser{
+    transform: scale(1.05);
+}
+
+/* title */
+
+.card-title{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #9E7676;
+    margin-top: 10px;
+}
+
+/* text */
+
+.card-text{
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+/* ===== EDIT BUTTON (si ton Edituser est bouton) ===== */
+
+.usercard button{
+    border-radius: 10px !important;
+    font-size: 0.75rem;
+    padding: 5px 10px !important;
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+
+/* ===== DELETE BUTTON ===== */
+
+.delete{
+    background: transparent !important;
+    border: none !important;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    margin-left: 8px;
+}
+
+.delete{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px !important;
+    background: rgba(58, 134, 255, 0.12); /* même vibe que edit */
+    transition: 0.3s ease;
+}
+
+.delete svg{
+    fill: #deb3fd;
+    transition: 0.3s ease;
+    opacity: 0.85;
+    width: 30px;
+    height: 30px;
+}
+
+/* .delete:hover{
+    box-shadow: 0 6px 15px rgba(201, 76, 76, 0.35);
+    transform: translateY(-2px) scale(1.05);
+} */
+
+.delete:hover{
+    transform: translateY(-2px) scale(1.05);
+    background: rgba(58, 134, 255, 0.25);
+    box-shadow: 0 6px 15px rgba(58, 134, 255, 0.25);
+}
+
+/* .delete:hover svg{
+    fill: #FF6B6B; 
+    filter: drop-shadow(0 0 6px rgba(201, 76, 76, 0.6));
+} */
+
+.delete:hover svg{
+    fill: #e8d2f8;
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(93, 153, 250, 0.6));
+}
+
+.delete:active{
+    transform: scale(0.9);
+}
+
+/* click effect */
+
+.delete:active{
+    transform: scale(0.9);
+}
+
+/* layout spacing */
+
+.card-body{
+    padding: 12px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-text.email{
+    color: #8D99AE;  /* violet moderne */
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.3px;
+}
+
+.card-text.date{
+    color: #cf9898;   /* couleur theme */
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.3px;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    gap: 5px;
+    width: 150px;
+    margin-left: 25px;
+}
