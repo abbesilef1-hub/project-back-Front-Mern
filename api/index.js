@@ -7,6 +7,7 @@ db_connect();
 // app.use(express.json());
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/user", require("./routes/user"));
 app.use("/product", require("./routes/product"));
 
